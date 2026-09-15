@@ -1,0 +1,15 @@
+{
+  "name": "photo-arkanoid",
+  "version": "1.0.0",
+  "description": "用兩張照片做出專屬打磚塊遊戲，產生連結分享給朋友。",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT",
+  "private": true
+}

@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>照片打磚塊 — 建立新遊戲</title>
+<meta name="description" content="上傳兩張照片，做出專屬的打磚塊遊戲，把連結傳給朋友一起玩。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='4' y='8' width='26' height='14' rx='3' fill='%23f472b6'/%3E%3Crect x='34' y='8' width='26' height='14' rx='3' fill='%237dd3fc'/%3E%3Crect x='4' y='26' width='26' height='14' rx='3' fill='%23818cf8'/%3E%3Crect x='34' y='26' width='26' height='14' rx='3' fill='%23fbbf24'/%3E%3Ccircle cx='32' cy='48' r='5' fill='white'/%3E%3Crect x='18' y='56' width='28' height='5' rx='2.5' fill='white'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="page">
+  <header class="hero">
+    <h1>🧱 照片打磚塊</h1>
+    <p>上傳兩張照片，做出專屬的打磚塊遊戲，把連結傳給朋友一起玩！</p>
+  </header>
+
+  <section class="card">
+    <h2>1. 磚塊照片</h2>
+    <p class="hint">每一塊磚塊都會顯示這張照片，建議用正方形或人臉特寫。</p>
+    <label class="drop" id="dropBrick">
+      <input type="file" id="fileBrick" accept="image/*" hidden>
+      <img class="preview" alt="磚塊照片預覽" hidden>
+      <span class="placeholder">📷 點此選擇磚塊照片</span>
+    </label>
+  </section>
+
+  <section class="card">
+    <h2>2. 底圖照片</h2>
+    <p class="hint">會被磚塊擋住，磚塊打掉後才會露出來的照片。</p>
+    <label class="drop" id="dropBg">
+      <input type="file" id="fileBg" accept="image/*" hidden>
+      <img class="preview" alt="底圖照片預覽" hidden>
+      <span class="placeholder">🖼️ 點此選擇底圖照片</span>
+    </label>
+  </section>
+
+  <section class="card">
+    <h2>3. 磚塊數量</h2>
+    <p class="hint">磚塊越多，遊戲時間越長。</p>
+    <div class="choices">
+      <label><input type="radio" name="cols" value="6">少<small>每列 6 塊</small></label>
+      <label><input type="radio" name="cols" value="8" checked>中<small>每列 8 塊</small></label>
+      <label><input type="radio" name="cols" value="10">多<small>每列 10 塊</small></label>
+    </div>
+  </section>
+
+  <button id="generate" class="primary block" disabled>產生遊戲連結</button>
+  <p id="status" class="status"></p>
+
+  <section class="card" id="result" hidden>
+    <h2>🎉 遊戲連結已產生</h2>
+    <p class="hint">把這個連結傳給朋友，他們就能玩你設定的遊戲。</p>
+    <div class="linkbox"><input id="link" readonly></div>
+    <div class="actions">
+      <button id="copy">📋 複製連結</button>
+      <button id="share">📤 分享</button>
+      <a id="play" class="button primary" href="#">▶ 開始遊玩</a>
+    </div>
+    <p id="resultNote" class="note" hidden></p>
+  </section>
+
+  <footer class="foot">在手機或電腦的瀏覽器都能玩。</footer>
+</div>
+<script src="shared.js"></script>
+<script src="create.js"></script>
+</body>
+</html>
