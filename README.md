@@ -47,7 +47,7 @@ docker run -p 3000:3000 -v $(pwd)/data:/app/data photo-arkanoid
 
 ### 最簡單的做法：GitHub Pages（免費、不用伺服器）
 
-1. 把這個 branch 合併到 `main`。
+1. 程式碼在 GitHub 上（任何一個在 workflow 裡列出的分支都可以）。
 2. 到 GitHub 的 **Settings → Pages**，**Source** 選 **GitHub Actions**。
 3. 等 **Actions** 分頁的 "Deploy to GitHub Pages" 跑完（約一分鐘），網址會是
    `https://<你的帳號>.github.io/ArkanoidGame/`。

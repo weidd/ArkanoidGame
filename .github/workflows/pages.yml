@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [main, master]
+    branches: [main, master, "claude/sharp-goodall-23rn7m"]
   workflow_dispatch:
 
 permissions:
