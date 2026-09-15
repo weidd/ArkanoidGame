@@ -45,6 +45,15 @@ docker run -p 3000:3000 -v $(pwd)/data:/app/data photo-arkanoid
 任何能跑 Node.js 的平台都可以（Render、Railway、Fly.io、VPS…），啟動指令就是 `node server.js`。
 記得把 `data/` 掛成持久化磁碟，否則重新部署後舊的遊戲連結會失效。
 
+### 最簡單的做法：GitHub Pages（免費、不用伺服器）
+
+1. 把這個 branch 合併到 `main`。
+2. 到 GitHub 的 **Settings → Pages**，**Source** 選 **GitHub Actions**。
+3. 等 **Actions** 分頁的 "Deploy to GitHub Pages" 跑完（約一分鐘），網址會是
+   `https://<你的帳號>.github.io/ArkanoidGame/`。
+
+之後每次推到 `main` 都會自動重新部署。這個模式沒有後端，會用下面說的「內嵌模式」產生連結。
+
 ### 沒有伺服器也能用（純靜態主機，例如 GitHub Pages）
 
 把 `public/` 目錄整個放到靜態主機上也能運作：建立頁偵測不到 API 時，
